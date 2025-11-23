@@ -51,19 +51,19 @@
 
 ## 🔍 **Key EDA Insights**
 
-### ✔ **Customer Behavior**
+###  **Customer Behavior**
 - Middle-aged customers (30–60) subscribe the most  
 - Higher education & stable job roles show better engagement  
 
-### ✔ **Contact Findings**
+###  **Contact Findings**
 - Cellular contact performs far better than telephone  
 - May, June, July are the strongest months  
 
-### ✔ **Economic Impact**
+###  **Economic Impact**
 - Lower interest rates (euribor3m) correlate with higher subscriptions  
 - Strong correlations found among economic indicators  
 
-### ✔ **Data Challenges**
+###  **Data Challenges**
 - High imbalance (~11% YES)  
 - Outliers in campaign counts & duration  
 - Skewed features requiring log transformation  
@@ -102,25 +102,24 @@ XGBoost provides the **best balance of recall and F1-score** for identifying pot
 
 ## 💡 **Business Recommendations**
 
-### ✔ **1. Target High-Probability Customers**
+###  **1. Target High-Probability Customers**
 Use model predictions to focus on customers with higher subscription likelihood.
 
-### ✔ **2. Prefer Mobile (Cellular) Calls**
+###  **2. Prefer Mobile (Cellular) Calls**
 Cellular communication shows far better conversion rates than telephone.
 
-### ✔ **3. Limit Calls to 2–3 Attempts**
+###  **3. Limit Calls to 2–3 Attempts**
 Avoid excessive calling; optimal follow-up is 2–3 attempts.
 
-### ✔ **4. Leverage Previous Campaign Success**
+###  **4. Leverage Previous Campaign Success**
 Customers with successful past outcomes should be prioritized.
 
-### ✔ **5. Time Campaigns Wisely**
+###  **5. Time Campaigns Wisely**
 Campaigns perform better during favorable economic conditions (e.g., low interest rates).
 
-### ✔ **6. Improve Call Quality**
+###  **6. Improve Call Quality**
 Longer, meaningful conversations increase the chance of subscription.
 
 ---
 
-## 📦 **Project Structure**
 
