@@ -6,6 +6,7 @@
 📌 Project Description
 
 This project analyzes the Portuguese Bank Marketing Dataset to understand customer behavior during marketing campaigns and predict whether a customer will subscribe to a term deposit.
+
 It includes complete EDA, feature engineering, data transformation, class imbalance handling, model building, and business insights.
 
 This project is ideal for:
@@ -29,7 +30,7 @@ Visualize distributions, correlations, outliers, and patterns
 
 Task 2 — Predictive Modeling
 
-Handle class imbalance with SMOTE
+Handle class imbalance using SMOTE
 
 Train 5 ML models (LR, DT, RF, XGBoost, LightGBM)
 
@@ -41,7 +42,9 @@ Task 3 — Business Recommendations
 
 Provide actionable strategies for improving conversions
 
-Recommend optimal campaign timings, customer segments, and contact approaches
+Recommend customer segments & optimal campaign timings
+
+Suggest contact methods & call frequency improvements
 
 📁 Dataset Overview
 
@@ -82,7 +85,7 @@ Statsmodels (VIF Analysis)
 🔍 Key EDA Insights
 ✔ Customer Behavior
 
-Middle-aged customers (30–60) subscribe the most
+Middle-aged customers (30–60) subscribe more
 
 Higher education & stable job roles show better engagement
 
@@ -94,9 +97,9 @@ May, June, July months show higher success
 
 ✔ Economic Impact
 
-Lower interest rates (euribor3m) correlate with higher subscriptions
+Lower interest rates (euribor3m) → higher subscriptions
 
-Strong correlations found between economic indicators
+Strong correlations found among economic indicators
 
 ✔ Data Challenges
 
@@ -104,14 +107,14 @@ High imbalance (~11% YES)
 
 Outliers in campaign counts & duration
 
-Skewed features requiring transformation
+Skewed features requiring log transformation
 
 🧠 Machine Learning Models Used
 Model	Status	Notes
 Logistic Regression	✔	High accuracy, low recall
 Decision Tree	✔	Overfitting
 Random Forest	✔	Good stability
-XGBoost	⭐ Best Model	Best recall & F1
+XGBoost	⭐ Best Model	Best recall & F1-score
 LightGBM	✔	High accuracy
 📊 Model Performance Summary
 Model	Accuracy	Precision (Yes)	Recall (Yes)	F1 (Yes)
@@ -122,30 +125,29 @@ Decision Tree	0.8413	0.32	0.36	0.34
 Logistic Regression	0.9000	0.62	0.26	0.36
 🎉 Final Selected Model: XGBoost
 
-Provides the best balance of recall & F1 for identifying potential subscribers.
+The XGBoost model provides the best recall and F1-score for identifying potential term-deposit subscribers, making it the most suitable for the bank’s real-world marketing needs.
 
 💡 Business Recommendations
 ✔ 1. Target High-Probability Customers
 
-Use model scores to prioritize customers most likely to subscribe.
+Use the model's prediction scores to prioritize customers who are most likely to subscribe.
 
 ✔ 2. Prefer Mobile (Cellular) Calls
 
-They have much better conversion rates.
+Customers respond much better to mobile communication than landline calls.
 
 ✔ 3. Limit Calls to 2–3 Attempts
 
-Too many calls reduce customer interest.
+Excessive calling reduces customer interest; optimal follow-up: 2–3 calls.
 
 ✔ 4. Leverage Previous Success
 
-Customers with past successful outcomes should be targeted first.
+Customers with positive outcomes in past campaigns should be contacted first.
 
 ✔ 5. Time Campaigns Wisely
 
-Run campaigns during favorable economic conditions (lower interest rates).
+Launch campaigns during favorable economic conditions (e.g., low interest rates).
 
 ✔ 6. Improve Call Quality
 
-Longer, meaningful calls increase subscription probability. 
-
+Longer, more meaningful conversations increase subscription probability.
