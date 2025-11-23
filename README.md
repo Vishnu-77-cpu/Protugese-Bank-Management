@@ -115,7 +115,7 @@ Avoid excessive calling; optimal follow-up is 2–3 attempts.
 Customers with successful past outcomes should be prioritized.
 
 ###  **5. Time Campaigns Wisely**
-Campaigns perform better during favorable economic conditions (e.g., low interest rates).
+Campaigns perform better during favorable economic conditions (e.g., low interest rates)
 
 ###  **6. Improve Call Quality**
 Longer, meaningful conversations increase the chance of subscription.
