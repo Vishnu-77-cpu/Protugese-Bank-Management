@@ -1,146 +1,151 @@
 ![WhatsApp Image 2025-11-23 at 16 58 30_01827c85](https://github.com/user-attachments/assets/03a08898-7340-43b4-9536-649aa288f891)
 
- Portuguese Bank Marketing Campaign – End-to-End Data Science Project
- EDA • Feature Engineering • SMOTE • Machine Learning Models • XGBoost
+🏦 Portuguese Bank Marketing Campaign – End-to-End Data Science Project
+🔍 EDA • Feature Engineering • SMOTE • Machine Learning • XGBoost
+<p align="center"> <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" /> <img src="https://img.shields.io/badge/Model-XGBoost-orange?style=for-the-badge" /> </p>
+📌 Project Description
 
-Project Overview
+This project analyzes the Portuguese Bank Marketing Dataset to understand customer behavior during marketing campaigns and predict whether a customer will subscribe to a term deposit.
+It includes complete EDA, feature engineering, data transformation, class imbalance handling, model building, and business insights.
 
-This project analyzes the Portuguese Bank Marketing Dataset to understand customer behaviors during marketing campaigns and build a predictive model that identifies which customers are most likely to subscribe to a term deposit.
+This project is ideal for:
 
-The goal is to support the bank’s marketing team in making data-driven decisions, reduce unnecessary calls, target the right customers, and improve overall conversion rates.
+Data Science Portfolio
 
-Objectives
-Task 1 – Complete Data Analysis Report
+ML Engineering Practice
 
-Perform data cleaning, preprocessing, and exploratory data analysis
+Marketing Analytics
 
-Understand customer, campaign, and economic patterns
+Predictive Modeling
 
-Identify key factors influencing term deposit subscriptions
+🎯 Project Objectives
+Task 1 — Complete Data Analysis Report
 
-Task 2 – Predictive Modeling
+Clean and analyze customer, campaign, and economic data
 
-Build ML models that can classify customers into “Will Subscribe” or “Will Not Subscribe”
+Identify key factors affecting customer subscription
 
-Handle class imbalance using SMOTE
+Visualize distributions, correlations, outliers, and patterns
 
-Compare multiple models and select the best performer
+Task 2 — Predictive Modeling
 
-Task 3 – Business Recommendations
+Handle class imbalance with SMOTE
 
-Provide actionable insights for the bank marketing team
+Train 5 ML models (LR, DT, RF, XGBoost, LightGBM)
 
-Suggest strategies to increase customer conversions
+Compare recall, precision, F1, and AUC
 
-Dataset
+Select the best model for customer prediction
 
-Portuguese Bank Marketing Dataset (May 2008 – November 2010)
-Includes:
+Task 3 — Business Recommendations
 
-Customer attributes (age, job, education, loans, marital status)
+Provide actionable strategies for improving conversions
 
-Campaign data (contact type, duration, month, previous outcome)
+Recommend optimal campaign timings, customer segments, and contact approaches
 
-Economic indicators (euribor3m, emp.var.rate, cons.price.idx, nr.employed)
+📁 Dataset Overview
 
-Target: y (yes/no – subscribed)
+Source: Portuguese Bank
 
-Tech Stack & Libraries
+Duration: 2008–2010
 
-Python, Pandas, NumPy – Data Cleaning
+Rows: 41,000+
 
-Matplotlib, Seaborn – EDA Visualizations
+Target: y (yes/no → term deposit subscribed)
 
-Scikit-learn – ML Models, Preprocessing, SMOTE
+Data Includes:
 
-XGBoost, LightGBM – Advanced boosting models
+Customer attributes (age, education, job, loans)
 
-VIF Analysis – Multicollinearity check
+Contact method & call details
 
-Exploratory Data Analysis (Highlights)
-Class Imbalance
+Campaign history
 
-88–90% “No”, only ~11% “Yes”
+Macro-economic indicators
 
-✔ Important Patterns
+🛠️ Technologies & Libraries Used
 
-Cellular contact works better than telephone
+Python
 
-Middle-aged & educated customers subscribe more
+Pandas, NumPy
 
-Favourable economic conditions increase subscription success
+Matplotlib, Seaborn
 
-Longer, meaningful conversations increase chance of “Yes”
+Scikit-Learn
 
-Previous successful campaigns strongly affect future success
+XGBoost, LightGBM
 
-✔ Data Cleaning
+SMOTE (imblearn)
 
-Removed duplicates
+Statsmodels (VIF Analysis)
 
-Treated 'unknown' values
+🔍 Key EDA Insights
+✔ Customer Behavior
 
-Corrected skewness using log transformations
+Middle-aged customers (30–60) subscribe the most
 
-Removed duration feature due to target leakage
+Higher education & stable job roles show better engagement
 
-Feature Engineering
+✔ Contact Findings
 
-Handled skewed features: campaign, previous, duration
+Cellular contact performs far better than telephone
 
-One-hot encoding for categorical features
+May, June, July months show higher success
 
-StandardScaler for numerical columns
+✔ Economic Impact
 
-Removed multicollinear features for Logistic Regression
+Lower interest rates (euribor3m) correlate with higher subscriptions
 
-Applied SMOTE to balance minority class
+Strong correlations found between economic indicators
 
-Machine Learning Models Used
-Model	Status
+✔ Data Challenges
 
-Logistic Regression	✔ Used
-Decision Tree	✔ Used
-Random Forest	✔ Used
-XGBoost	⭐ Best Model
-LightGBM	✔ Tuned
+High imbalance (~11% YES)
 
-Model Performance Summary
+Outliers in campaign counts & duration
+
+Skewed features requiring transformation
+
+🧠 Machine Learning Models Used
+Model	Status	Notes
+Logistic Regression	✔	High accuracy, low recall
+Decision Tree	✔	Overfitting
+Random Forest	✔	Good stability
+XGBoost	⭐ Best Model	Best recall & F1
+LightGBM	✔	High accuracy
+📊 Model Performance Summary
 Model	Accuracy	Precision (Yes)	Recall (Yes)	F1 (Yes)
 LightGBM	0.9006	0.61	0.34	0.43
 XGBoost	0.8969	0.56	0.38	0.45
 Random Forest	0.8862	0.49	0.38	0.43
 Decision Tree	0.8413	0.32	0.36	0.34
 Logistic Regression	0.9000	0.62	0.26	0.36
-✅ Final Model Selected: XGBoost
+🎉 Final Selected Model: XGBoost
 
-XGBoost provides the best balance between recall and F1-score for the YES class — the most important for the bank.
+Provides the best balance of recall & F1 for identifying potential subscribers.
 
-Business Recommendations
-1️⃣ Target the Right Customers
+💡 Business Recommendations
+✔ 1. Target High-Probability Customers
 
-Use the model to call high-probability customers first → higher conversions & lower cost.
+Use model scores to prioritize customers most likely to subscribe.
 
-2️⃣ Use Cellular Over Telephone
+✔ 2. Prefer Mobile (Cellular) Calls
 
-Mobile calls produce significantly higher positive responses.
+They have much better conversion rates.
 
-3️⃣ Limit Contact Attempts
+✔ 3. Limit Calls to 2–3 Attempts
 
-2–3 calls per customer work best — avoid over-calling.
+Too many calls reduce customer interest.
 
-4️⃣ Retarget Customers with Previous Success
+✔ 4. Leverage Previous Success
 
-Past successful outcomes strongly indicate future success.
+Customers with past successful outcomes should be targeted first.
 
-5️⃣ Focus on Educated & Stable Job Profiles
+✔ 5. Time Campaigns Wisely
 
-Higher education and stable professions show higher subscription rates.
+Run campaigns during favorable economic conditions (lower interest rates).
 
-6️⃣ Time Campaigns During Favourable Economic Conditions
+✔ 6. Improve Call Quality
 
-Low interest rates → more customers invest in term deposits.
+Longer, meaningful calls increase subscription probability. 
 
-7️⃣ Improve Call Quality
-
-Longer, meaningful calls increase success. Train agents accordingly.
